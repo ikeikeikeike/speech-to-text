@@ -11,6 +11,7 @@ RUN echo "deb http://deb.debian.org/debian jessie main" > /etc/apt/sources.list 
         ca-certificates \
         curl \
         vim \
+        net-tools \
         git \
         make \
         sudo \
@@ -36,5 +37,3 @@ RUN mkdir -p /opt/models/test/models && \
     ln -s /opt/models/test .
 
 ENV GST_PLUGIN_PATH /opt/gst-kaldi-nnet2-online/src
-
-# ENTRYPOINT ["sh", "-c", "gst-inspect-1.0", "kaldinnet2onlinedecoder"]
